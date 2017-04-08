@@ -8,12 +8,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     let container = Container() { c in
         c.register(CompanyAPIType.self) { _ in CompanyAPI() }
+            .inObjectScope(.container)
+
         c.register(CompanyService.self) { r in
-            let service = CompanyService()
-            service.api = r.resolve(CompanyAPIType.self)
-            service.load()
-            return service
-        }
+                let service = CompanyService()
+                service.api = r.resolve(CompanyAPIType.self)
+                service.load()
+                return service
+            }
+            .inObjectScope(.container)
 
         // this is how you should sign your view controllers to have the service when it's needed
         c.register(ViewController.self) { r in
