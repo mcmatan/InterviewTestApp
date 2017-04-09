@@ -26,14 +26,19 @@ class CompanyService {
 
     func getCompanyName(_ completion: @escaping (String)->()) {
         queryQueue.addOperation {
-            completion(self.company.name)
+            DispatchQueue.main.async {
+                completion(self.company.name)
+            }
         }
     }
 
     func getEmployees(forManagerId managerId: Int? = nil, completion: @escaping ([Employee])->()) {
         queryQueue.addOperation {
             let employees = self.company.employees.filter { $0.managerId == managerId }
-            completion(employees)
+
+            DispatchQueue.main.async {
+                completion(employees)
+            }
         }
     }
 
