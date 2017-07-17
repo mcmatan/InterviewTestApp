@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .inObjectScope(.container)
 
         // this is how you should sign your view controllers to have the service when it's needed
-        c.register(ViewController.self) { r in
-            let controller = ViewController(nibName: nil, bundle: nil)
+        c.register(MainScreenController.self) { r in
+            let controller = MainScreenController(nibName: nil, bundle: nil)
             controller.companyService = r.resolve(CompanyService.self)
             return controller
         }
@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
 
         // Instantiate the root view controller with dependencies injected by the container.
-        window.rootViewController = container.resolve(ViewController.self)
+        window.rootViewController = container.resolve(MainScreenController.self)
 
         return true
     }

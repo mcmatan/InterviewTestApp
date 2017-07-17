@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8AD4ABBA1F1CC9EB007AED53 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABB91F1CC9EB007AED53 /* MainScreenController.swift */; };
+		8AD4ABBC1F1CCA79007AED53 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABBB1F1CCA79007AED53 /* PageTitleView.swift */; };
+		8AD4ABBE1F1CCF11007AED53 /* EmployScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABBD1F1CCF11007AED53 /* EmployScroll.swift */; };
+		8AD4ABC11F1CCF98007AED53 /* EmpolyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC01F1CCF98007AED53 /* EmpolyCell.swift */; };
 		B048798B1E99110A00346778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048798A1E99110A00346778 /* AppDelegate.swift */; };
 		B048798D1E99110A00346778 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048798C1E99110A00346778 /* ViewController.swift */; };
 		B04879921E99110A00346778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04879911E99110A00346778 /* Assets.xcassets */; };
@@ -22,6 +26,10 @@
 		4EB1853B3F03B2E8D64E90A8 /* Pods-MobileTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTest/Pods-MobileTest.release.xcconfig"; sourceTree = "<group>"; };
 		6010086C3FFAA751F267E517 /* Pods_MobileTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A33E8D9F496D760323F8AA0 /* Pods-MobileTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileTest/Pods-MobileTest.debug.xcconfig"; sourceTree = "<group>"; };
+		8AD4ABB91F1CC9EB007AED53 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		8AD4ABBB1F1CCA79007AED53 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageTitleView.swift; sourceTree = "<group>"; };
+		8AD4ABBD1F1CCF11007AED53 /* EmployScroll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployScroll.swift; sourceTree = "<group>"; };
+		8AD4ABC01F1CCF98007AED53 /* EmpolyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmpolyCell.swift; sourceTree = "<group>"; };
 		B04879871E99110A00346778 /* MobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B048798A1E99110A00346778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B048798C1E99110A00346778 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +54,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8AD4ABB61F1CC9A1007AED53 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8AD4ABBF1F1CCF56007AED53 /* Cell */,
+				8AD4ABB81F1CC9CC007AED53 /* View */,
+				8AD4ABB71F1CC9C5007AED53 /* VIewControllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		8AD4ABB71F1CC9C5007AED53 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B048798C1E99110A00346778 /* ViewController.swift */,
+				8AD4ABB91F1CC9EB007AED53 /* MainScreenController.swift */,
+			);
+			name = VIewControllers;
+			sourceTree = "<group>";
+		};
+		8AD4ABB81F1CC9CC007AED53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8AD4ABBB1F1CCA79007AED53 /* PageTitleView.swift */,
+				8AD4ABBD1F1CCF11007AED53 /* EmployScroll.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8AD4ABBF1F1CCF56007AED53 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8AD4ABC01F1CCF98007AED53 /* EmpolyCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		920E9256CA291182B303BC8E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,10 +128,10 @@
 		B04879891E99110A00346778 /* MobileTest */ = {
 			isa = PBXGroup;
 			children = (
+				8AD4ABB61F1CC9A1007AED53 /* UI */,
 				B04879A21E99160500346778 /* models */,
 				B048799C1E99128400346778 /* services */,
 				B048798A1E99110A00346778 /* AppDelegate.swift */,
-				B048798C1E99110A00346778 /* ViewController.swift */,
 				B04879911E99110A00346778 /* Assets.xcassets */,
 				B04879931E99110A00346778 /* LaunchScreen.storyboard */,
 				B04879961E99110A00346778 /* Info.plist */,
@@ -225,7 +269,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -235,9 +279,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD4ABBC1F1CCA79007AED53 /* PageTitleView.swift in Sources */,
+				8AD4ABC11F1CCF98007AED53 /* EmpolyCell.swift in Sources */,
 				B04879A11E9915E000346778 /* CompanyAPI.swift in Sources */,
 				B04879A61E99162200346778 /* Employee.swift in Sources */,
+				8AD4ABBE1F1CCF11007AED53 /* EmployScroll.swift in Sources */,
 				B048798D1E99110A00346778 /* ViewController.swift in Sources */,
+				8AD4ABBA1F1CC9EB007AED53 /* MainScreenController.swift in Sources */,
 				B048799F1E9912ED00346778 /* CompanyService.swift in Sources */,
 				B04879A41E99161A00346778 /* Company.swift in Sources */,
 				B048798B1E99110A00346778 /* AppDelegate.swift in Sources */,
