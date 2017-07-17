@@ -12,10 +12,14 @@ import SnapKit
 
 
 class PageTitleView: UIView {
-    let title = UILabel()
+    private let title = UILabel()
     init(title: String) {
         super.init(frame: CGRect.zero)
         setupView(title: title)
+    }
+    
+    public func setTitle(title: String) {
+        self.title.text = title
     }
     
     convenience init() {

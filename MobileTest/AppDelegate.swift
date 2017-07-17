@@ -18,12 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             .inObjectScope(.container)
 
-        // this is how you should sign your view controllers to have the service when it's needed
-        c.register(MainScreenController.self) { r in
-            let controller = MainScreenController(nibName: nil, bundle: nil)
+        
+        c.register(ManagerScreen.self) { r in
+            let controller = ManagerScreen(nibName: nil, bundle: nil)
             controller.companyService = r.resolve(CompanyService.self)
             return controller
         }
+        
+        c.register(MainScreenController.self) { r in
+            let controller = MainScreenController(nibName: nil, bundle: nil)
+            controller.companyService = r.resolve(CompanyService.self)
+            controller.managerScreen = r.resolve(ManagerScreen.self)
+            return controller
+        }
+        
+    
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -33,7 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = window
 
         // Instantiate the root view controller with dependencies injected by the container.
-        window.rootViewController = container.resolve(MainScreenController.self)
+        
+        let nav = UINavigationController(rootViewController: container.resolve(MainScreenController.self)!)
+        window.rootViewController = nav
 
         return true
     }

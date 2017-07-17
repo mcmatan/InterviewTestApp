@@ -11,26 +11,27 @@ import UIKit
 import SnapKit
 
 let titleTopOffset = 100
+let screenSize: CGRect = UIScreen.main.bounds
 
-class MainScreenController: UIViewController {
+class MainScreenController: UIViewController, EmployScrollDidSelect {
     let pageTitle = PageTitleView(title: "DaPulse")
-    let employScroll = EmployScroll(frame: CGRect.zero)
+    let employScroll = EmployScroll(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height * 0.3))
     
     // injected on AppDelegate
     var companyService: CompanyService?
+    var managerScreen: ManagerScreen?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        weak var weakSelf = self
         companyService?.getCompanyName({ (name) in
+            weakSelf?.pageTitle.setTitle(title: name)
             print(name)
         })
         
         companyService?.getTopLevelEmployees(completion: { (employees) in
-            print(employees)
-        })
-        
-        companyService?.getEmployees(forManagerId: 22, completion: { (employees) in
+            weakSelf?.employScroll.setEmployees(employees: employees)
             print(employees)
         })
     }
@@ -38,6 +39,7 @@ class MainScreenController: UIViewController {
     override func loadView() {
         super.loadView()
         self.setupView()
+        self.employScroll.delegate = self
     }
     
     //MARK: View layout
@@ -57,6 +59,15 @@ class MainScreenController: UIViewController {
             make.height.equalTo(200)
         }
         
+    }
+    
+    //MARK: Delegate
+    
+    func didSelectEmployee(employee: Employee) {
+        if (employee.isManager) {
+            self.managerScreen?.setManager(employee: employee)
+            self.navigationController?.pushViewController(self.managerScreen!, animated: true)
+        }
     }
 }
 
