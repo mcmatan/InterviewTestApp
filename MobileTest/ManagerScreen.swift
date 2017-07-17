@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 
-class ManagerScreen: UIViewController {
+class ManagerScreen: UIViewController, EmployScrollDidSelect {
     private let pageTitle = PageTitleView(title: "R&D")
     private let manageerEmployeeView = EmployeeView(frame: CGRect.zero)
     private let employeesTitle = PageTitleView(title: "Employees")
     private let employScroll = EmployScroll(frame: CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height * 0.3))
     private var manager: Employee?
+
     
     // injected on AppDelegate
     var companyService: CompanyService?
@@ -33,6 +34,7 @@ class ManagerScreen: UIViewController {
     override func loadView() {
         super.loadView()
         
+        self.employScroll.delegate = self
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(self.pageTitle)
         self.pageTitle.snp.makeConstraints { (make) in
@@ -56,8 +58,14 @@ class ManagerScreen: UIViewController {
             make.height.equalTo(200)
             make.top.equalTo(self.employeesTitle.snp.bottom)
         }
-
-        
+    }
+    
+    //MARK: Delegate
+    
+    func didSelectEmployee(employee: Employee) {
+        let profile = ProfileScreen()
+        profile.setEmployee(emplyee: employee)
+        self.navigationController?.present(profile, animated: true, completion: nil)
     }
     
 }

@@ -13,14 +13,14 @@ import UIKit
 
 let cellId = "myCell"
 
-protocol EmployScrollDidSelect {
+protocol EmployScrollDidSelect: NSObjectProtocol {
     func didSelectEmployee(employee: Employee)
 }
 
 class EmployScroll: UIView, UICollectionViewDataSource, UICollectionViewDelegate {
     private var employees: [Employee]?
     var myCollectionView:UICollectionView?
-    var delegate: EmployScrollDidSelect?
+    weak var delegate: EmployScrollDidSelect?
     
     public func setEmployees(employees: [Employee]) {
         self.employees = employees

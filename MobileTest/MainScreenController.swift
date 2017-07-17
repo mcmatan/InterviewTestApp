@@ -24,14 +24,14 @@ class MainScreenController: UIViewController, EmployScrollDidSelect {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        weak var weakSelf = self
-        companyService?.getCompanyName({ (name) in
-            weakSelf?.pageTitle.setTitle(title: name)
+        
+        companyService?.getCompanyName({ [unowned self] (name) in
+            self.pageTitle.setTitle(title: name)
             print(name)
         })
         
-        companyService?.getTopLevelEmployees(completion: { (employees) in
-            weakSelf?.employScroll.setEmployees(employees: employees)
+        companyService?.getTopLevelEmployees( completion: { [unowned self] (employees) in
+            self.employScroll.setEmployees(employees: employees)
             print(employees)
         })
     }

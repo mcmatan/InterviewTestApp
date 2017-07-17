@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 let profileImageSize = 100
 
@@ -21,6 +22,8 @@ class EmployeeView: UIView {
     public func setEmployee(employee: Employee) {
         self.title.text = employee.name
         self.discription.text = employee.title
+        let url = URL(string: employee.profilePic)
+        self.imageView.kf.setImage(with: url)
     }
     
     override init(frame: CGRect) {

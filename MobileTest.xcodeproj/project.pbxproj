@@ -13,6 +13,8 @@
 		8AD4ABC11F1CCF98007AED53 /* EmplyeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC01F1CCF98007AED53 /* EmplyeeCell.swift */; };
 		8AD4ABC31F1CDE7D007AED53 /* EmployeeeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC21F1CDE7D007AED53 /* EmployeeeView.swift */; };
 		8AD4ABC51F1CDFF4007AED53 /* ManagerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC41F1CDFF4007AED53 /* ManagerScreen.swift */; };
+		8AD4ABC71F1CE614007AED53 /* ProfileScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC61F1CE614007AED53 /* ProfileScreen.swift */; };
+		8AD4ABC91F1CE69C007AED53 /* EmployeeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4ABC81F1CE69C007AED53 /* EmployeeDetailsView.swift */; };
 		B048798B1E99110A00346778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B048798A1E99110A00346778 /* AppDelegate.swift */; };
 		B04879921E99110A00346778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B04879911E99110A00346778 /* Assets.xcassets */; };
 		B04879951E99110A00346778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B04879931E99110A00346778 /* LaunchScreen.storyboard */; };
@@ -33,6 +35,8 @@
 		8AD4ABC01F1CCF98007AED53 /* EmplyeeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmplyeeCell.swift; sourceTree = "<group>"; };
 		8AD4ABC21F1CDE7D007AED53 /* EmployeeeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeeView.swift; sourceTree = "<group>"; };
 		8AD4ABC41F1CDFF4007AED53 /* ManagerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagerScreen.swift; sourceTree = "<group>"; };
+		8AD4ABC61F1CE614007AED53 /* ProfileScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileScreen.swift; sourceTree = "<group>"; };
+		8AD4ABC81F1CE69C007AED53 /* EmployeeDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeDetailsView.swift; sourceTree = "<group>"; };
 		B04879871E99110A00346778 /* MobileTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B048798A1E99110A00346778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B04879911E99110A00346778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			children = (
 				8AD4ABB91F1CC9EB007AED53 /* MainScreenController.swift */,
 				8AD4ABC41F1CDFF4007AED53 /* ManagerScreen.swift */,
+				8AD4ABC61F1CE614007AED53 /* ProfileScreen.swift */,
 			);
 			name = VIewControllers;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 				8AD4ABBB1F1CCA79007AED53 /* PageTitleView.swift */,
 				8AD4ABBD1F1CCF11007AED53 /* EmployScroll.swift */,
 				8AD4ABC21F1CDE7D007AED53 /* EmployeeeView.swift */,
+				8AD4ABC81F1CE69C007AED53 /* EmployeeDetailsView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 				B04879A11E9915E000346778 /* CompanyAPI.swift in Sources */,
 				B04879A61E99162200346778 /* Employee.swift in Sources */,
 				8AD4ABC31F1CDE7D007AED53 /* EmployeeeView.swift in Sources */,
+				8AD4ABC91F1CE69C007AED53 /* EmployeeDetailsView.swift in Sources */,
 				8AD4ABBE1F1CCF11007AED53 /* EmployScroll.swift in Sources */,
 				8AD4ABBA1F1CC9EB007AED53 /* MainScreenController.swift in Sources */,
+				8AD4ABC71F1CE614007AED53 /* ProfileScreen.swift in Sources */,
 				B048799F1E9912ED00346778 /* CompanyService.swift in Sources */,
 				8AD4ABC51F1CDFF4007AED53 /* ManagerScreen.swift in Sources */,
 				B04879A41E99161A00346778 /* Company.swift in Sources */,
